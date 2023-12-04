@@ -17,5 +17,5 @@ if (!isNaN(number)) {
     const result = fizzBuzz(number);
     console.log(result);
 } else {
-    console.log("Sorry, but is not a number.");
+    console.log("Sorry, but this is not a number.");
 }
