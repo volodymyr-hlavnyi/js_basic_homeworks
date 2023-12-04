@@ -1,12 +1,23 @@
 // 'number' + 23 + 32
 console.log('number' + 23 + 32)
-// 'number' string
+// 'number' is string
 // plus 23 plus 23
 // result -> string number2323
 
 // 41 + 1 + 'number'
+console.log(41 + 1 + 'number')
+// 41 is number
+// 1 is number
+// number plus number 42 is number
+// number pus string is string 42number
+
 // null + 1
+console.log(null + 1)
+// null is nothing
+// nothing plus 1 (number) is number 1
+
 // 'five' + + 'two'
+console.log('five' + + 'two')
 // 2 && 7
 // +'40' + +'2';
 // '10' - 5 === 6;
