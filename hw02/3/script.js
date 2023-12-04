@@ -1,21 +1,26 @@
-function fizzBuzz(num) {
-    if (num % 3 === 0 && num % 5 === 0) {
-        return "FizzBuzz";
-    } else if (num % 3 === 0) {
-        return "Fizz";
-    } else if (num % 5 === 0) {
-        return "Buzz";
-    } else {
-        return num.toString();
+function formatYearsMessage(years) {
+    function getYearWord(years) {
+        if (years === 1) {
+            return "рік";
+        } else if (years >= 2 && years <= 4) {
+            return "роки";
+        } else {
+            return "років";
+        }
     }
+    const yearWord = getYearWord(years);
+    return `Вам ${years} ${yearWord}.`;
 }
 
-const userInput = prompt("Enter number:");
-const number = parseInt(userInput);
+// User input for the number of years
+const userInput = prompt("Enter the number of years:");
+const years = parseInt(userInput);
 
-if (!isNaN(number)) {
-    const result = fizzBuzz(number);
-    console.log(result);
+// Check if the input is a valid integer
+if (!isNaN(years)) {
+    // Format and display the message based on the number of years
+    const message = formatYearsMessage(years);
+    console.log(message);
 } else {
-    console.log("Sorry, but is not a number.");
+    console.log("Please enter a valid integer for the number of years.");
 }
