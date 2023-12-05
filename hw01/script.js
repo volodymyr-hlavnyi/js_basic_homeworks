@@ -6,19 +6,19 @@
 // result -> string number2323
 //------------------
 
-// 41 + 1 + 'number'
+// 41 + task1 + 'number'
 
 // 41 is number
-// 1 is number
+// task1 is number
 // number plus number 42 is number
 // number pus string
 // result-> string 42number
 //------------------
 
-// null + 1
+// null + task1
 
 // null is nothing
-// nothing plus 1 (number) is number 1
+// nothing plus task1 (number) is number task1
 //------------------
 
 // 'five' + + 'two'
@@ -29,7 +29,7 @@
 // result -> string fiveNaN
 //------------------
 
-// 2 && 7
+// task2 && 7
 
 // More generally, the operator returns the value
 // of the first falsy operand encountered when
@@ -38,10 +38,10 @@
 // return 7 -> number
 //------------------
 
-// +'40' + +'2';
+// +'40' + +'task2';
 
 // +'40' - number because +
-// +'2' - number because +
+// +'task2' - number because +
 // number 40 plus number result is 42 (number)
 //------------------
 
@@ -55,12 +55,12 @@
 
 // true + false
 
-// true is 1
+// true is task1
 // false is 0
-// 1 + 0 result is 1 -> number
+// task1 + 0 result is task1 -> number
 //------------------
 
-// '4px' - 3
+// '4px' - task3
 
 // '4px'
 // minus try to convert to number but px -> string
@@ -68,16 +68,16 @@
 // string minus number result -> NaN
 //------------------
 
-// '4' - 3
+// '4' - task3
 
 // '4' convert to number
-// 4 number minus 3 result is 1 (number)
+// 4 number minus task3 result is task1 (number)
 //------------------
 
-// '2' + 3 ** 2;
+// 'task2' + task3 ** task2;
 
-// 1st 3 ** 2 result is 9
-// '2' string + (concatenation) 9
+// 1st task3 ** task2 result is 9
+// 'task2' string + (concatenation) 9
 // result 29 (string)
 //------------------
 
@@ -85,7 +85,7 @@
 
 // 12 number
 // / divide try convert '6' to number
-// 12 / 6 result 2 (number)
+// 12 / 6 result task2 (number)
 //------------------
 
 // 23 + 42 + 'number'
@@ -101,19 +101,19 @@
 // result -> 10false (string)
 //------------------
 
-// 'number' + 15 + 3
+// 'number' + 15 + task3
 
 // 'number' string
-// plus concatenate 15 as string anf 3 as string
+// plus concatenate 15 as string anf task3 as string
 // result number153
 //------------------
 
-// undefined + 1;
+// undefined + task1;
 
 // undefined is not reserved word
-// then undefined concatenate 1 try to convert to number
+// then undefined concatenate task1 try to convert to number
 // but it is not number is it a string
-// string + 1 result NaN
+// string + task1 result NaN
 //------------------
 
 // 'true' == true
@@ -136,10 +136,10 @@
 // result false (boolean)
 //------------------
 
-// 3 ** (9 / 3);
+// task3 ** (9 / task3);
 
-// number 9 / 3 because () -> 3
-// 3 power of 3
+// number 9 / task3 because () -> task3
+// task3 power of task3
 // result 27 (number)
 //------------------
 
@@ -150,17 +150,17 @@
 // result true (boolean)
 //------------------
 
-// 0 || '0' && 1
+// 0 || '0' && task1
 
 // 0 or '0' result '0'
-// '0' and 1 ('0' true) and (1 true)
-// result 1 (boolean)
+// '0' and task1 ('0' true) and (task1 true)
+// result task1 (boolean)
 //------------------
 
-// 1 < 2 < 3
+// task1 < task2 < task3
 
-// 1 < 2 true
-// 2 < 3 true
+// task1 < task2 true
+// task2 < task3 true
 // result is true (boolean)
 //------------------
 
@@ -171,23 +171,23 @@
 // result -> fooNaN
 //------------------
 
-// 3 ** 2 / 3;
+// task3 ** task2 / task3;
 
-// 3 power of 2 -> 9
-// 9 / 3 rrsult -> 3 (number)
+// task3 power of task2 -> 9
+// 9 / task3 rrsult -> task3 (number)
 //------------------
 
-// 1 < 2 > 3
+// task1 < task2 > task3
 
-// 1 < 2 true
-// but 2 not > 3 result false (boolean)
+// task1 < task2 true
+// but task2 not > task3 result false (boolean)
 //------------------
 
-// (+null == false) < 1;
+// (+null == false) < task1;
 
 // +null -> 0
 // 0 == false (false is 0) result -> true
-// true (1) not < 1 result false (boolean)
+// true (task1) not < task1 result false (boolean)
 //------------------
 
 // false && true || true
@@ -202,10 +202,10 @@
 // true and false result -> false
 //------------------
 
-// (+null == false) < 1 ** 5;
+// (+null == false) < task1 ** 5;
 
 // +null -> 0
 // 0 == false -> false
-// false or 0 < 1**5 (5) not -> false
+// false or 0 < task1**5 (5) not -> false
 // result false (boolean)
 //------------------

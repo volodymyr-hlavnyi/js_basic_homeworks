@@ -1,10 +1,10 @@
 function isPrime(number) {
-    // Check if the number is less than or equal to 1
+    // Check if the number is less than or equal to task1
     if (number <= 1) {
         return false;
     }
 
-    // Check for factors from 2 to the square root of the number
+    // Check for factors from task2 to the square root of the number
     for (let i = 2; i <= Math.sqrt(number); i++) {
         if (number % i === 0) {
             // If any factor is found, the number is not prime
