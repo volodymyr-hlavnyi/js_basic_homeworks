@@ -18,4 +18,5 @@ const num2 = prompt("Enter the 2nd number:");
 
 const gcd = findGCD(num1, num2);
 
+
 console.log(`The GCD (НСД) of ${num1} and ${num2} is: ${gcd}`);
