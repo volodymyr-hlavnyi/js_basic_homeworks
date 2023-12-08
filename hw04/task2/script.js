@@ -1,6 +1,6 @@
 function isPalindrome(str) {
 
-    const cleanStr = str.toLowerCase().replace(/ /g, '');
+    const cleanStr = str.toLowerCase().replace(/[\s.,\/#!$%\^&\*;:{}=\-_`~()]/g, '');
     // Compare
     return cleanStr === cleanStr.split('').reverse().join('');
 }
