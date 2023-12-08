@@ -13,4 +13,5 @@ const students = [
     { name: "Charlie", age: 19, grade: 4.8 }
 ];
 
+
 console.log(calculateAverageGrade(students));
