@@ -1,7 +1,9 @@
-function uniqueValues(arr1, arr2) {
-    const combinedArray = arr1.concat(arr2);
-    return Array.from(new Set(combinedArray));
-}
+// function uniqueValues(arr1, arr2) {
+//     const combinedArray = arr1.concat(arr2);
+//     return Array.from(new Set(combinedArray));
+// }
+
+const uniqueValues = (arr1, arr2) => [...new Set([...arr1, ...arr2])];
 
 const array1 = [1, 2, 3, 4, 5];
 const array2 = [3, 4, 5, 6, 7];
