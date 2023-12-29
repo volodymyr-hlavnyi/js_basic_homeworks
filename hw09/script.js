@@ -153,6 +153,7 @@ Group.prototype.getAverageAttendance = function () {
     return totalPossibleAttendance === 0 ? 0 : (totalAttendance / totalPossibleAttendance) * 100;
 };
 
+
 Group.prototype.getStudentRating = function () {
     return this.students
         .map(student => {
