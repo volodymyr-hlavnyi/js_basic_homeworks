@@ -3,6 +3,7 @@ class TodoList {
         this.notes = [];
     }
 
+
     addNote(noteText) {
         if (noteText.trim() !== "") {
             const newNote = {
@@ -17,6 +18,7 @@ class TodoList {
             console.log("Note text cannot be empty.");
         }
     }
+
 
     editNote(index, newText) {
         if (index >= 0 && index < this.notes.length) {
