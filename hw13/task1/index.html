@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW 13 Weather Widget</title>
+</head>
+
+<body>
+<label for="cityInput">Select or Enter City:</label>
+<label for="citySelect"></label><select id="citySelect">
+    <option value="Kyiv">Kyiv</option>
+    <option value="New York">New York</option>
+    <option value="Pert">Pert</option>
+    <option value="Toronto">Toronto</option>
+    <option value="Wermelskirchen">Wermelskirchen</option>
+</select>
+<input type="text" id="cityInput" placeholder="Or enter your city">
+<button onclick="getWeather()">Get Weather</button>
+
+<div id="weatherInfo"></div>
+<script type="modult" src="api.js"></script>
+<script type="module" src="script.js"></script>
+<script type="module" src="scriptonselect.js"></script>
+</body>
+</html>
