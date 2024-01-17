@@ -20,12 +20,6 @@ async function getWeather() {
         displayWeather(weatherData);
     } catch (error) {
         console.error('Error:', error);
-
-        const weatherInfoDiv = document.getElementById('weatherInfo');
-        // weatherInfoDiv.innerHTML = '';
-        const weatherErrorDiv = document.createElement('div');
-        weatherErrorDiv.textContent = `Error: ${error}`;
-        weatherInfoDiv.appendChild(weatherInfoDiv);
     }
 }
 
@@ -81,11 +75,12 @@ async function displayWeather(weatherData) {
     const weatherDataFields = {
         'Country': weatherData.sys.country,
         'City': weatherData.name,
+        'Description': weatherData.weather[0].description,
         'Temperature': temperatureCelsius + ' °C',
         'Pressure': weatherData.main.pressure,
         'Humidity': weatherData.main.humidity,
         'Wind speed': windSpeed + ` m/s`,
-        'Sky': weatherData.weather[0].main,
+        // 'Sky': weatherData.weather[0].main,
         'Sunrise': localTimeWithAMPMSunrise,
         'Sunset': localTimeWithAMPMSunset
     };
