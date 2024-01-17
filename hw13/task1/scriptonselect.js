@@ -1,3 +1,5 @@
+import { getWeather } from './script.js';
+
 const citySelect = document.getElementById('citySelect');
 const cityInput = document.getElementById('cityInput');
 

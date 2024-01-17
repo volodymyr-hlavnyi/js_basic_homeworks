@@ -1,3 +1,4 @@
+import {apiKey} from './api.js';
 
 function convertUTCToLocalTimeWithAMPM(utcTime) {
     const date = new Date(utcTime * 1000);
@@ -27,9 +28,7 @@ async function getWeather() {
 
 async function getCoordinates(city) {
 
-    import {apiKey} from './api.js';
     const geoUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${apiKey}`;
-    console.log(`${apiKey}`)
 
     const response = await fetch(geoUrl);
     const data = await response.json();
@@ -46,7 +45,6 @@ async function getCoordinates(city) {
 
 async function getWeatherData(coordinates) {
 
-
     const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.lat}&lon=${coordinates.lon}&units=metric&exclude=minutely,hourly&appid=${apiKey}`;
 
     const response = await fetch(weatherUrl);
@@ -58,6 +56,8 @@ async function getWeatherData(coordinates) {
         throw new Error(`Failed to fetch weather data. ${data.message}`);
     }
 }
+
+export { getWeather };
 
 async function displayWeather(weatherData) {
 
