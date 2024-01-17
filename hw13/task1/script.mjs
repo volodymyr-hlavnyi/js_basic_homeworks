@@ -1,3 +1,4 @@
+
 function convertUTCToLocalTimeWithAMPM(utcTime) {
     const date = new Date(utcTime * 1000);
     let localTime;
@@ -25,12 +26,10 @@ async function getWeather() {
 }
 
 async function getCoordinates(city) {
-    const apiKey = `d017476ed5d76f9f701fab4862f38713`;
-    // const dotenv = require('dotenv');
-    // dotenv.config();
-    // const apiKey = process.env.OPENWEATHERMAP_API_KEY || 'default_key';
 
+    import {apiKey} from './api.js';
     const geoUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${apiKey}`;
+    console.log(`${apiKey}`)
 
     const response = await fetch(geoUrl);
     const data = await response.json();
@@ -46,12 +45,8 @@ async function getCoordinates(city) {
 }
 
 async function getWeatherData(coordinates) {
-    const apiKey = `d017476ed5d76f9f701fab4862f38713`;
-    //require('dotenv').config();
-    //import dotenv from 'dotenv';
-    //dotenv.config();
-    //const apiKey = process.env.OPENWEATHERMAP_API_KEY || 'default_key';
-    //console.log('apiKey '+apiKey);
+
+
     const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.lat}&lon=${coordinates.lon}&units=metric&exclude=minutely,hourly&appid=${apiKey}`;
 
     const response = await fetch(weatherUrl);

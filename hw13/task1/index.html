@@ -8,7 +8,7 @@
 
 <body>
 <label for="cityInput">Select or Enter City:</label>
-<select id="citySelect">
+<label for="citySelect"></label><select id="citySelect">
     <option value="Kyiv">Kyiv</option>
     <option value="New York">New York</option>
     <option value="Pert">Pert</option>
@@ -19,7 +19,8 @@
 <button onclick="getWeather()">Get Weather</button>
 
 <div id="weatherInfo"></div>
-<script src="script.js"></script>
-<script src="scriptonselect.js"></script>
+<script type="module" src="api.js"></script>
+<script type="module" src="script.mjs"></script>
+<script type="module" src="scriptonselect.js"></script>
 </body>
 </html>
