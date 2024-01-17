@@ -1,12 +1,13 @@
 function convertUTCToLocalTimeWithAMPM(utcTime) {
     const date = new Date(utcTime * 1000);
-    const localTime = date.toLocaleTimeString('en-US', { hour12: true, hour: '2-digit', minute: '2-digit' });
+    let localTime;
+    localTime = date.toLocaleTimeString('en-US', {hour12: true, hour: '2-digit', minute: '2-digit'});
     return localTime;
 }
 
 async function getWeatherIconUrl(iconId) {
-    const apiKey = 'd017476ed5d76f9f701fab4862f38713';
-    const iconUrl = `http://openweathermap.org/img/w/${iconId}.png`;
+    let iconUrl;
+    iconUrl = `http://openweathermap.org/img/w/${iconId}.png`;
     return iconUrl;
 }
 
@@ -25,6 +26,10 @@ async function getWeather() {
 
 async function getCoordinates(city) {
     const apiKey = `d017476ed5d76f9f701fab4862f38713`;
+    // const dotenv = require('dotenv');
+    // dotenv.config();
+    // const apiKey = process.env.OPENWEATHERMAP_API_KEY || 'default_key';
+
     const geoUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${apiKey}`;
 
     const response = await fetch(geoUrl);
@@ -42,6 +47,11 @@ async function getCoordinates(city) {
 
 async function getWeatherData(coordinates) {
     const apiKey = `d017476ed5d76f9f701fab4862f38713`;
+    //require('dotenv').config();
+    //import dotenv from 'dotenv';
+    //dotenv.config();
+    //const apiKey = process.env.OPENWEATHERMAP_API_KEY || 'default_key';
+    //console.log('apiKey '+apiKey);
     const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.lat}&lon=${coordinates.lon}&units=metric&exclude=minutely,hourly&appid=${apiKey}`;
 
     const response = await fetch(weatherUrl);
